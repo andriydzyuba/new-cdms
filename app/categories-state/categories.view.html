@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-md-8">
+        <div class="main">
+            <h2 data-ng-bind="vm.infoCat[0].head"></h2>
+            <div class="row">
+                <div class="col-md-6 card lastnews" data-ng-repeat="lastNews in vm.lastNews">
+                    <img class="card-img-top" data-ng-src="{{lastNews.image}}" alt="Card image" width="100%">
+                    <div class="card-body">
+                        <h5 class="card-title" data-toggle="tooltip" title="{{lastNews.title}}" data-ng-bind="lastNews.title"></h5>
+                        <a ui-sref="article({id:lastNews.id})" class="btn btn-success">Детальніше</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="right text-center">
+            <h5><b>Керівник напрямку:</b><br><span data-ng-bind="vm.infoCat[0].manager"></span></h5>
+            <p data-ng-bind="vm.infoCat[0].descrip"></p>
+        </div>
+    </div>
+</div>
+<!--<h1>Home</h1>-->
+
+<!--<div ng-repeat="user in vm.users track by $index">-->
+    <!--<p>{{user.name}} - {{user.role}}</p>-->
+<!--</div>-->
+
+
+<!--<h1>{{vm.user.name}}</h1>-->
+
+<!--<h2>Last news</h2>-->
+<!--<div ng-repeat="article in vm.news track by $index">-->
+    <!--<p>{{article.title}}</p>-->
+    <!--<p>{{article.text}}</p>-->
+<!--</div>-->

@@ -1,0 +1,33 @@
+footer {
+  padding: 2%;
+  border-top: 3px solid #ebebeb;
+  background-color: #f9f19f;
+  font-size: 1.2em;
+
+  .social > a {
+    padding: 4% 2%;
+    font-size: 3em;
+  }
+
+  .social > a:nth-child(1) {
+    color: #5054b4;
+  }
+
+  .social > a:nth-child(2) {
+    color: #fe0000;
+  }
+
+  .social > a:nth-child(3) {
+    color: #3190f5;
+  }
+
+  .social > a:hover {
+    position: relative;
+    bottom: 5px;
+  }
+
+  .copyright {
+    margin-top: 2%;
+    font-size: 0.9em;
+  }
+}

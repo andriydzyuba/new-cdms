@@ -1,0 +1,52 @@
+<div class="container-fluid article">
+  <h3 data-ng-bind="vm.manual.title"></h3>
+  <hr>
+  <h4 data-ng-bind="vm.manual.date"></h4>
+  <h4 data-ng-bind="vm.categories[vm.manual.catId].title"></h4>
+  <hr>
+  <img data-ng-src="{{vm.manual.image}}" alt="" width="50%">
+  <div class="article-text">
+    <div data-read-markup
+         data-markup="vm.manual.text"
+    ></div>
+  </div>
+
+  <div class="article-comments">
+    <div data-comments
+         data-options="vm.options"
+         data-ng-if="vm.options"
+    ></div>
+  </div>
+</div>
+
+<!--<div class="article-view">-->
+  <!--<div class="article-header">-->
+    <!--<div class="container-fluid">-->
+      <!--<div class="row row-no-padding">-->
+        <!--<div class="col-md-2 col-xs-3">-->
+          <!--<div class="article-main-image">-->
+            <!--<img data-ng-src="{{vm.article.image}}" alt="">-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-md-10 col-xs-9">-->
+          <!--<div class="article-title">-->
+            <!--<h1 data-ng-bind="vm.article.title"></h1>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+
+  <!--<div class="article-text">-->
+    <!--<div data-read-markup-->
+         <!--data-markup="vm.article.text"-->
+    <!--&gt;</div>-->
+  <!--</div>-->
+
+  <!--<div class="article-comments">-->
+    <!--<div data-comments-->
+         <!--data-options="vm.options"-->
+         <!--data-ng-if="vm.options"-->
+    <!--&gt;</div>-->
+  <!--</div>-->
+<!--</div>-->

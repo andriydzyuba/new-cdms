@@ -1,0 +1,36 @@
+<div class="news-panel">
+  <div class="row">
+    <a ui-sref="dashboard.createArticle({catId: 0})">cat1</a>
+    <a ui-sref="dashboard.createArticle({catId: 1})">cat2</a>
+    <a ui-sref="dashboard.createArticle({catId: 2})">cat3</a>
+    </div>
+    <div class="col-md-8">
+      <div data-ng-repeat="article in vm.news" class="manage-block row">
+        <div class="col-md-4">
+          <img data-ng-src="{{article.image}}">
+        </div>
+        <div class="col-md-8">
+          <h4 data-ng-bind="article.title"></h4>
+        </div>
+        <div class="manage-buttons">
+              <span>
+                <a class="btn btn-default btn-xs"
+                        ui-sref="dashboard.editArticle({id: article.id})"
+                        title="Edit Article">
+                  <i class="fa fa-pencil" aria-hidden="true"></i>
+                </a>
+                <button class="btn btn-danger btn-xs"
+                        data-ng-click="vm.showDeleteArticleModal(article)"
+                        title="Delete Article">
+                  <i class="fa fa-trash-o" aria-hidden="true"></i>
+                </button>
+              </span>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+
