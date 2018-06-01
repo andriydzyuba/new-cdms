@@ -19,43 +19,62 @@
         return directive;
     }
 
-    EcoHeaderController.$inject = ['$element', '$rootScope', '$scope', '$state'];
-    /* @ngInject */
-    function EcoHeaderController($element, $rootScope, $scope, $state) {
-        var vm = this;
- /*       vm.states = [];
 
-        vm.getStateHref = getStateHref;
+    EcoHeaderController.$inject = ["$location", 'newsService'];
 
-        activate();
+    function EcoHeaderController($location, newsService) {
+        // var vm = this;
+        // console.log('jjj');
 
-        function activate() {
-            updateStates();
-        }
+        // vm.onSelectOptionChanged = onSelectOptionChanged;
 
-        function getStateHref(state) {
-            return $state.href(state.name, state.params);
-        }
+        // vm.searchNews = [];
 
-        function updateStates() {
-            var statesList = [
-                {
-                    ukName: 'Головна',
-                    name: 'home'
-                },
-                {
-                    ukName: 'Про проект',
-                    name: 'about'
-                }
-            ];
+        // function onSelectOptionChanged () {
+        //     console.log('fff');
 
-            vm.states.length = 0;
+            // $location.path('home');
+            //
+            // vm.searchNews.length = 0;
+            // vm.searchFunction();
+        // }
 
-            _.each(statesList, function(elem) {
-                vm.states.push(elem);
-            })
-        }
-        console.log(vm.states);*/
+        // vm.searchFunction = function () {
+        //
+        //     var params = {
+        //         limit: 15,
+        //         offset: vm.searchNews.length
+        //     }
+        //
+        //     if (vm.title) {
+        //         params.title = vm.title
+        //     }
+        //
+        //     if (vm.title.length > 2) {
+        //         newsService.searchNews(params).then(function (response) {
+        //             console.log(response);
+        //             if (response) {
+        //                 for (var i = 0; i < response.length; i++) {
+        //                     vm.searchNews.push(response[i]);
+        //                 }
+        //                 if (response.length > 1) {
+        //                     vm.showbutton = true;
+        //                 } else {
+        //                     vm.showbutton = false;
+        //                 }
+        //             }
+        //         })
+        //     }
+        // }
+        //
+        // vm.title = null;
+        //
+        // vm.cleanFilter = function () {
+        //
+        //     vm.searchNews.length = 0;
+        //     vm.title = null;
+        // }
 
     }
+
 })();

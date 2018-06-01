@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="main">
+        <h2>Пошук</h2>
+        <form>
+            <div class="input-group">
+                <input type="text" class="form-control" data-ng-model="vm.title" placeholder="Пошук" name="search">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit" data-ng-click="vm.onSelectOptionChanged()">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+        <div class="container-fluid">
+            <div class="row">
+                <br>
+                <h3>Результати пошуку:</h3>
+                <div class="col-md-3 card lastnews" data-ng-repeat="findNew in vm.findNews">
+                    <img class="card-img-top" data-ng-src="{{findNew.image}}" alt="Card image" width="100%">
+                    <div class="card-body">
+                        <h5 class="card-title" data-toggle="tooltip" title="{{findNew.title}}" data-ng-bind="findNew.title"></h5>
+                        <a ui-sref="article({id:findNew.id})" class="btn btn-success">Детальніше</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" data-ng-show="vm.showbutton">
+                <a href="" class="btn btn-info" data-ng-click="vm.searchFunction()">Показати ще </a>
+                <br><br>
+            </div>
+        </div>
+    </div>
+</div>

@@ -5,15 +5,15 @@
         .module('app')
         .controller('PublicationsController', PublicationsController);
 
-    PublicationsController.$inject = ['newsService'];
+    PublicationsController.$inject = ['publicationsService'];
 
-    function PublicationsController(newsService) {
+    function PublicationsController(publicationsService) {
         var vm = this;
 
         activate();
 
         function activate() {
-            newsService.getPublications().then(function (data) {
+            publicationsService.getPublications().then(function (data) {
                 vm.cdmsPublic = data.data;
                 console.log(vm.cdmsPublic);
             });

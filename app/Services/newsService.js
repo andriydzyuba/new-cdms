@@ -12,15 +12,14 @@
         var service = {
             data: {},
             getNews: getNews,
-            getPublications: getPublications,
             getNewsByCategory: getNewsByCategory,
             getInfoByCategory: getInfoByCategory,
             getLastNews: getLastNews,
             getArticle: getArticle,
-            getManual: getManual,
             createArticle: createArticle,
             editArticle: editArticle,
-            deleteArticle: deleteArticle
+            deleteArticle: deleteArticle,
+            searchNews: searchNews
         };
 
         //Категорії
@@ -35,17 +34,6 @@
         function getNews() {
             var defered = $q.defer();
             var query= 'api/news/getNews.php';
-
-            $http.post(query).then(function(data){
-                defered.resolve(data);
-            });
-
-            return defered.promise;
-        }
-
-        function getPublications() {
-            var defered = $q.defer();
-            var query= 'api/news/getPublications.php';
 
             $http.post(query).then(function(data){
                 defered.resolve(data);
@@ -97,16 +85,6 @@
             return defered.promise;
         }
 
-        function getManual(id) {
-            var defered = $q.defer();
-            var query = 'api/news/getManual.php', id;
-
-            $http.post(query, id).then(function(data){
-                defered.resolve(data);
-            });
-            return defered.promise;
-        }
-
         function createArticle(article) {
             var defered = $q.defer();
             var query = 'api/news/createArticle.php';
@@ -137,7 +115,15 @@
             return defered.promise;
         }
 
+        function searchNews(params) {
+            var defered = $q.defer();
+            var query = 'api/news/searchNews.php', params;
 
+            $http.post(query, params).then(function(data){
+                defered.resolve(data);
+            });
+            return defered.promise
+        };
 
     }
 })();

@@ -6,8 +6,8 @@ angular
       'ui.router',
       'ui.router.state.events',
       'ui.bootstrap',
-        'ngCropper',
-        'summernote',
+      'ngCropper',
+      'summernote',
       'ngStorage'
     ])
 

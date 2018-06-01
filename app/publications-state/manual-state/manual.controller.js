@@ -5,19 +5,19 @@
         .module('app')
         .controller('ManualController', ManualController);
 
-    ManualController.$inject = ['$stateParams', 'newsService'];
+    ManualController.$inject = ['$stateParams', 'publicationsService'];
 
-    function ManualController($stateParams, newsService) {
+    function ManualController($stateParams, publicationsService) {
         var vm = this;
 
         var manualId = $stateParams.id;
 
-        vm.categories = newsService.data;
+        vm.categories = publicationsService.data;
 
         activate();
 
         function activate() {
-            newsService.getManual(manualId).then(function(data) {
+            publicationsService.getManual(manualId).then(function(data) {
                 vm.manual = data.data;
                 console.log(vm.manual);
             })

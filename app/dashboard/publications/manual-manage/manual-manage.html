@@ -2,14 +2,14 @@
   <form>
     <div class="row">
       <div class="col-md-4">
-        <select-image data-image="vm.article.imgUrl" data-editable="true"></select-image>
+        <select-image-manual data-image="vm.manual.imgUrl" data-editable="true"></select-image-manual>
       </div>
       <div class="col-md-8">
 
-        <h1>Категорія: {{vm.categories[vm.article.catId].title}}</h1>
+        <h1>Категорія: {{vm.categories[vm.manual.catId].title}}</h1>
         <h1>Змінити категорію</h1>
         <select ng-model="vm.selectedCat">
-          <option selected disabled value="{{vm.article.catId}}">{{vm.categories[vm.article.catId].title}}</option>
+          <option selected disabled value="{{vm.manual.catId}}">{{vm.categories[vm.manual.catId].title}}</option>
           <option ng-repeat="categori in vm.categories track by $index" value="{{categori.catId}}">{{categori.title}}</option>
         </select>
 
@@ -17,22 +17,22 @@
 
         <div class="input-group">
           <input type="text"
-                 data-ng-model="vm.article.title"
-                 placeholder="Article Title"
+                 data-ng-model="vm.manual.title"
+                 placeholder="Manual Title"
                  class="form-control">
         </div>
 
         <!--<div class="input-group">-->
-          <!--<textarea data-ng-model="vm.article.snippet"-->
-                    <!--placeholder="Article Description"-->
+          <!--<textarea data-ng-model="vm.manual.snippet"-->
+                    <!--placeholder="Manual Description"-->
                     <!--class="form-control">-->
           <!--</textarea>-->
-        </div>
+        <!--</div>-->
       </div>
     </div>
-<summer text="vm.article.text"></summer>
+<summer text="vm.manual.text"></summer>
   </form>
-  <button data-ng-click="vm.manageArticle()"
+  <button data-ng-click="vm.manageManual()"
           class="btn btn-success"
           data-ng-bind="vm.buttonText">
   </button>

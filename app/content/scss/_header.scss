@@ -41,6 +41,14 @@ header {
     .navbar-nav>li>a:hover {
       color: #000000;
     }
+
+    .navbar-right {
+      margin: 9px 20px 5px 5px;
+
+      .searchbutton {
+        font-weight: bold;
+      }
+    }
   }
 
   .affix {
