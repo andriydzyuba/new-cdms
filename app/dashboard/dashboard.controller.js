@@ -4,10 +4,14 @@
 		.module('app')
 		.controller('DashboardController', DashboardController);
 
-	DashboardController.$inject = [];
+	DashboardController.$inject = ['authService'];
 
-	function DashboardController() {
+	function DashboardController(authService) {
 		var vm = this;
+
+        vm.signOut = function() {
+            authService.signOut();
+        }
 
 	}
 })();

@@ -85,7 +85,7 @@ h2 {
 
 .cdmspublic {
   max-width: 55%;
-  margin: 1% auto;
+  margin: 1% auto 3% auto;
   padding: 0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   .cdmspublic .card-body {
@@ -167,11 +167,32 @@ footer {
 
 .article {
   padding-right: 2%; }
-  .article img {
-    padding: 0 2% 1% 0;
+  .article .article-data {
+    float: right; }
+  .article .article-category {
     float: left; }
+  .article img {
+    margin: 5px 30px 5px 0;
+    float: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   .article p {
     text-align: justify;
     line-height: 1.8; }
+  .article hr {
+    margin: 0; }
+
+.dashboard-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.dashboard-image {
+  margin-bottom: 10px; }
+
+.select-image-container > input {
+  display: none; }
+
+.select-image-overlay {
+  margin: 10px 0; }
 
 /*# sourceMappingURL=style.css.map */

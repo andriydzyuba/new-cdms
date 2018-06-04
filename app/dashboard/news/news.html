@@ -1,35 +1,33 @@
-<div class="news-panel">
+<div class="row">
+  <hr>
+  <h3 class="text-center">Створити новину</h3>
+  <h4 class="text-center">(Оберіть потрібну категорію)</h4>
   <div class="row">
-    <a ui-sref="dashboard.createArticle({catId: 0})">cat1</a>
-    <a ui-sref="dashboard.createArticle({catId: 1})">cat2</a>
-    <a ui-sref="dashboard.createArticle({catId: 2})">cat3</a>
+    <div class="col-md-12">
+      <div class="btn-group btn-group-justified">
+        <a class="btn btn-default" ui-sref="dashboard.createArticle({catId: 0})">Місцеве самоврядування і громадськість</a>
+        <a class="btn btn-default" ui-sref="dashboard.createArticle({catId: 1})">Управління житловою нерухомістю</a>
+        <a class="btn btn-default" ui-sref="dashboard.createArticle({catId: 2})">Муніципальне управління</a>
+      </div>
     </div>
-    <div class="col-md-8">
-      <div data-ng-repeat="article in vm.news" class="manage-block row">
-        <div class="col-md-4">
-          <img data-ng-src="{{article.image}}" width="100%">
+  </div>
+  <hr>
+  <h3 class="text-center">Попередні новини</h3>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-6 row" data-ng-repeat="article in vm.news">
+        <div class="col-md-6">
+          <img class="dashboard-image" data-ng-src="{{article.image}}" width="100%">
         </div>
-        <div class="col-md-8">
-          <h4 data-ng-bind="article.title"></h4>
-        </div>
-        <div class="manage-buttons">
-              <span>
-                <a class="btn btn-default btn-xs"
-                        ui-sref="dashboard.editArticle({id: article.id})"
-                        title="Edit Article">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </a>
-                <button class="btn btn-danger btn-xs"
-                        data-ng-click="vm.showDeleteArticleModal(article)"
-                        title="Delete Article">
-                  <i class="fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </span>
+        <div class="col-md-6">
+          <h4 class="dashboard-title" data-toggle="tooltip" title="{{article.title}}" data-ng-bind="article.title"></h4>
+          <div class="btn-group">
+            <a class="btn btn-warning" ui-sref="dashboard.editArticle({id: article.id})">Змінити</a>
+            <a class="btn btn-danger" data-ng-click="vm.showDeleteArticleModal(article)">Видалити</a>
+          </div>
         </div>
       </div>
-
-
-
     </div>
   </div>
 </div>

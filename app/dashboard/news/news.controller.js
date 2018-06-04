@@ -30,7 +30,7 @@
 
 
         function showDeleteArticleModal(article) {
-            var message = "Are you sure you want to delete this article?";
+            var message = "Ви впевнені, що хочете видалити цю новину?";
             confirmService.openConfirmModal(message).then(function(response){
                 if (response) {
                     newsService.deleteArticle(article.id).then(function(data){

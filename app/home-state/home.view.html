@@ -1,32 +1,7 @@
 <div class="row">
     <div class="col-md-8">
-        <!--<form>-->
-            <!--<div class="input-group">-->
-                <!--<input type="text" class="form-control" data-ng-model="vm.title" placeholder="Пошук" name="search">-->
-                <!--<div class="input-group-btn">-->
-                    <!--<button class="btn btn-default" type="submit" data-ng-click="vm.onSelectOptionChanged()">-->
-                        <!--<i class="glyphicon glyphicon-search"></i>-->
-                    <!--</button>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</form>-->
-        <!--<div class="container-fluid">-->
-            <!--<div class="row">-->
-                <!--<div class="col-md-6 card lastnews" data-ng-repeat="findNew in vm.findNews">-->
-                    <!--<img class="card-img-top" data-ng-src="{{findNew.image}}" alt="Card image" width="100%">-->
-                    <!--<div class="card-body">-->
-                        <!--<h5 class="card-title" data-toggle="tooltip" title="{{findNew.title}}" data-ng-bind="findNew.title"></h5>-->
-                        <!--<a ui-sref="article({id:findNew.id})" class="btn btn-success">Детальніше</a>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="text-center" data-ng-show="vm.showbutton">-->
-                <!--<a href="" class="btn btn-info" data-ng-click="vm.searchFunction()">Показати ще </a>-->
-                <!--<br><br>-->
-            <!--</div>-->
-        <!--</div>-->
         <div class="main">
-            <h2>Останні новини</h2>
+            <h3>Останні новини</h3>
             <div class="row">
                 <div class="col-md-6 card lastnews" data-ng-repeat="lastNews in vm.lastNews">
                     <img class="card-img-top" data-ng-src="{{lastNews.image}}" alt="Card image" width="100%">
@@ -38,18 +13,18 @@
             </div>
         </div>
         <br><br>
-        <div class="container-fluid">
+        <div class="row">
             <h2 class="text-center">Партнери</h2>
             <div class="partners">
-                <a href=""><img data-ng-src="content/images/logo.png" alt=""></a>
-                <a href=""><img data-ng-src="content/images/logo.png" alt=""></a>
-                <a href=""><img data-ng-src="content/images/logo.png" alt=""></a>
-                <a href=""><img data-ng-src="content/images/logo.png" alt=""></a>
+                <a href="http://www.iwoev.org/"><img data-ng-src="content/images/partner_1.jpg" alt=""></a>
+                <a href="http://pravo.org.ua/"><img data-ng-src="content/images/partner_2.jpg" alt=""></a>
+                <a href="http://www.city-institute.org/"><img data-ng-src="content/images/partner_3.png" alt=""></a>
+                <a href="http://mknieruchomosci.pl/"><img data-ng-src="content/images/partner_4.jpg" alt=""></a>
                 <br>
-                <a href=""><img data-ng-src="content/images/logo.png" alt=""></a>
-                <a href=""><img data-ng-src="content/images/logo.png" alt=""></a>
-                <a href=""><img data-ng-src="content/images/logo.png" alt=""></a>
-                <a href=""><img data-ng-src="content/images/logo.png" alt=""></a>
+                <a href="http://www.auc.org.ua/"><img data-ng-src="content/images/partner_5.jpg" alt=""></a>
+                <a href="http://www.oblrada.lviv.ua/асоціація_«ради_львівщини»_393cms.htm"><img data-ng-src="content/images/partner_6.png" alt=""></a>
+                <a href="http://www.loma.org.ua/"><img data-ng-src="content/images/partner_7.jpg" alt=""></a>
+                <a href="https://sites.google.com/site/lvivltek/"><img data-ng-src="content/images/partner_8.jpg" alt=""></a>
             </div>
         </div>
     </div>

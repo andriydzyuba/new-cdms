@@ -9,7 +9,8 @@
                     url:'/dashboard',
                     templateUrl: 'dashboard/dashboard.html',
                     controller: 'DashboardController',
-                    controllerAs: 'vm'
+                    controllerAs: 'vm',
+                    dashboard: true
                 })
         }])
 })();

@@ -24,9 +24,9 @@
 
         //Категорії
         service.data = [
-        {catId:0, title: 'Лекс'},
-        {catId:1, title: 'Лекс2'},
-        {catId:2, title: 'Лекс3'}
+            {catId:0, title: 'Місцеве самоврядування і громадськість'},
+            {catId:1, title: 'Управління житловою нерухомістю'},
+            {catId:2, title: 'Муніципальне управління'}
         ];
 
         return service;

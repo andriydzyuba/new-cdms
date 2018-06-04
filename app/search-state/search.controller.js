@@ -11,11 +11,16 @@
 
         vm.onSelectOptionChanged = onSelectOptionChanged;
 
+        vm.inputSearch = /^[a-zA-Z]{1,10}$/;
+
         vm.findNews = [];
 
         function onSelectOptionChanged () {
 
             $location.path('/search');
+
+            vm.showtitle = false;
+            vm.noresulte = false;
 
             vm.findNews.length = 0;
             vm.searchFunction();
@@ -48,11 +53,17 @@
                             vm.showbutton = false;
                         }
                     }
+                    if (vm.findNews.length > 0) {
+                        vm.showtitle = true;
+                        vm.noresulte = false;
+                    } else {
+                        vm.showtitle = false;
+                        vm.showbutton = false;
+                        vm.noresulte = true;
+                    }
                 })
             }
         }
-
-        // vm.title = null;
 
     }
 })();

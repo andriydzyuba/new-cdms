@@ -13,7 +13,7 @@
             catId: $stateParams.catId
         };
 
-        vm.buttonText = 'Create Article';
+        vm.buttonText = 'Створити новину';
         vm.manageArticle = createArticle;
         vm.selectedLocations = [];
 

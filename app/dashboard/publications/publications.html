@@ -1,35 +1,33 @@
-<div class="news-panel">
+<div class="row">
+  <hr>
+  <h3 class="text-center">Створити публікацію</h3>
+  <h4 class="text-center">(Оберіть потрібну категорію)</h4>
   <div class="row">
-    <a ui-sref="dashboard.createManual({catId: 0})">cat1</a>
-    <a ui-sref="dashboard.createManual({catId: 1})">cat2</a>
-    <a ui-sref="dashboard.createManual({catId: 2})">cat3</a>
+    <div class="col-md-12">
+      <div class="btn-group btn-group-justified">
+        <a class="btn btn-default" ui-sref="dashboard.createManual({catId: 0})">Місцеве самоврядування і громадськість</a>
+        <a class="btn btn-default" ui-sref="dashboard.createManual({catId: 1})">Управління житловою нерухомістю</a>
+        <a class="btn btn-default" ui-sref="dashboard.createManual({catId: 2})">Муніципальне управління</a>
+      </div>
     </div>
-    <div class="col-md-8">
-      <div data-ng-repeat="manual in vm.publications" class="manage-block row">
-        <div class="col-md-4">
-          <img data-ng-src="{{manual.image}}" width="100%">
+  </div>
+  <hr>
+  <h3 class="text-center">Попередні публікації</h3>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-6 row" data-ng-repeat="manual in vm.publications">
+        <div class="col-md-6">
+          <img class="dashboard-image" data-ng-src="{{manual.image}}" width="100%">
         </div>
-        <div class="col-md-8">
-          <h4 data-ng-bind="manual.title"></h4>
-        </div>
-        <div class="manage-buttons">
-              <span>
-                <a class="btn btn-default btn-xs"
-                        ui-sref="dashboard.editManual({id: manual.id})"
-                        title="Edit Manual">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </a>
-                <button class="btn btn-danger btn-xs"
-                        data-ng-click="vm.showDeleteManualModal(manual)"
-                        title="Delete Manual">
-                  <i class="fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </span>
+        <div class="col-md-6">
+          <h4 class="dashboard-title" data-toggle="tooltip" title="{{manual.title}}" data-ng-bind="manual.title"></h4>
+          <div class="btn-group">
+            <a class="btn btn-warning" ui-sref="dashboard.editManual({id: manual.id})">Змінити</a>
+            <a class="btn btn-danger" data-ng-click="vm.showDeleteManualModal(manual)">Видалити</a>
+          </div>
         </div>
       </div>
-
-
-
     </div>
   </div>
 </div>

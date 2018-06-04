@@ -10,7 +10,7 @@
         var vm = this;
 
         var manualId = parseInt($stateParams.id);
-        vm.buttonText = 'Edit Manual';
+        vm.buttonText = 'Змінити публікацію';
         vm.manageManual = editManual;
        
 

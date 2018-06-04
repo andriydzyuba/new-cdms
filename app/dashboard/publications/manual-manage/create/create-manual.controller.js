@@ -13,7 +13,7 @@
             catId: $stateParams.catId
         };
 
-        vm.buttonText = 'Create Manual';
+        vm.buttonText = 'Створити публікацію';
         vm.manageManual = createManual;
         vm.selectedLocations = [];
 

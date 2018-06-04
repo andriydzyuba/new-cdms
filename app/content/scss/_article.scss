@@ -1,13 +1,26 @@
 .article {
   padding-right: 2%;
 
-  img {
-    padding: 0 2% 1% 0;
+  .article-data {
+    float: right;
+  }
+
+  .article-category {
     float: left;
+  }
+
+  img {
+    margin: 5px 30px 5px 0;
+    float: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
   p {
     text-align: justify;
     line-height: 1.8;
+  }
+
+  hr {
+    margin: 0;
   }
 }

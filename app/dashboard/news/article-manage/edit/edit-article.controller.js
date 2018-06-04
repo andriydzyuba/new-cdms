@@ -10,7 +10,7 @@
         var vm = this;
 
         var articleId = parseInt($stateParams.id);
-        vm.buttonText = 'Edit Article';
+        vm.buttonText = 'Змінити новину';
         vm.manageArticle = editArticle;
        
 

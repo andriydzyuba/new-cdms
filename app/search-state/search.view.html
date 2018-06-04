@@ -1,9 +1,10 @@
 <div class="row">
     <div class="main">
-        <h2>Пошук</h2>
+        <h3>Пошук</h3>
+        <h5>Введіть не менше трьох символів.</h5>
         <form>
             <div class="input-group">
-                <input type="text" class="form-control" data-ng-model="vm.title" placeholder="Пошук" name="search">
+                <input type="text" class="form-control" data-ng-model="vm.title" placeholder="Пошук" name="search" ng-pattern="vm.inputSearch">
                 <div class="input-group-btn">
                     <button class="btn btn-default" type="submit" data-ng-click="vm.onSelectOptionChanged()">
                         <i class="glyphicon glyphicon-search"></i>
@@ -14,7 +15,8 @@
         <div class="container-fluid">
             <div class="row">
                 <br>
-                <h3>Результати пошуку:</h3>
+                <h4 data-ng-show="vm.showtitle">Результати пошуку:</h4>
+                <h4 data-ng-show="vm.noresulte">Результати пошуку відсутні.</h4>
                 <div class="col-md-3 card lastnews" data-ng-repeat="findNew in vm.findNews">
                     <img class="card-img-top" data-ng-src="{{findNew.image}}" alt="Card image" width="100%">
                     <div class="card-body">
@@ -24,6 +26,7 @@
                 </div>
             </div>
             <div class="text-center" data-ng-show="vm.showbutton">
+                <br><br>
                 <a href="" class="btn btn-info" data-ng-click="vm.searchFunction()">Показати ще </a>
                 <br><br>
             </div>

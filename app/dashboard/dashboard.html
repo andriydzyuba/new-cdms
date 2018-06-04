@@ -1,13 +1,14 @@
 <div class="dashboard-container">
-	<div class="container-fluid">
+	<div class="container-fluid main">
+        <h3>Адміністративна панель</h3>
 		<div class="row">
 			<div class="col-md-12">
-				<ul class="list-group dashboard-navigation">
-					<li class="list-group-item"><a ui-sref="dashboard.news">Новини</a></li>
-					<li class="list-group-item"><a ui-sref="dashboard.publications">Публікації</a></li>
-				</ul>
+				<div class="btn-group btn-group-justified">
+					<a class="btn btn-info" ui-sref="dashboard.news">Новини</a></li>
+					<a class="btn btn-primary" ui-sref="dashboard.publications">Публікації</a></li>
+					<a class="btn btn-danger" ui-sref="home" data-ng-click="vm.signOut()">Вийти</a></li>
+				</div>
 			</div>
-
 			<div class="col-md-12">
 				<div ui-view></div>
 			</div>

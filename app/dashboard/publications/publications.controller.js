@@ -30,7 +30,7 @@
 
 
         function showDeleteManualModal(manual) {
-            var message = "Are you sure you want to delete this article?";
+            var message = "Ви впевнені, що хочете видалити цю публікацію?";
             confirmService.openConfirmModal(message).then(function(response){
                 if (response) {
                     publicationsService.deleteManual(manual.id).then(function(data){

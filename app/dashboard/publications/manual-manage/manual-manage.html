@@ -1,25 +1,24 @@
 <div class="article-manage">
+  <br>
   <form>
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-6">
         <select-image-manual data-image="vm.manual.imgUrl" data-editable="true"></select-image-manual>
       </div>
-      <div class="col-md-8">
 
-        <h1>Категорія: {{vm.categories[vm.manual.catId].title}}</h1>
-        <h1>Змінити категорію</h1>
+      <div class="col-md-6">
+        <h3>Категорія:<br> {{vm.categories[vm.manual.catId].title}}</h3>
+        <h3>Змінити категорію</h3>
         <select ng-model="vm.selectedCat">
           <option selected disabled value="{{vm.manual.catId}}">{{vm.categories[vm.manual.catId].title}}</option>
           <option ng-repeat="categori in vm.categories track by $index" value="{{categori.catId}}">{{categori.title}}</option>
         </select>
 
-        <h1>{{vm.selectedCat}}</h1>
+        <!--<h3>{{vm.selectedCat}}</h3>-->
 
-        <div class="input-group">
-          <input type="text"
-                 data-ng-model="vm.manual.title"
-                 placeholder="Manual Title"
-                 class="form-control">
+        <div>
+          <br>
+          <input type="text" data-ng-model="vm.manual.title" placeholder="Назва публікації" class="form-control">
         </div>
 
         <!--<div class="input-group">-->
@@ -30,10 +29,8 @@
         <!--</div>-->
       </div>
     </div>
-<summer text="vm.manual.text"></summer>
+
+    <summer text="vm.manual.text"></summer>
   </form>
-  <button data-ng-click="vm.manageManual()"
-          class="btn btn-success"
-          data-ng-bind="vm.buttonText">
-  </button>
+  <button data-ng-click="vm.manageManual()" class="btn btn-success" data-ng-bind="vm.buttonText"></button>
 </div>
