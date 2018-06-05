@@ -1,3 +1,32 @@
+$boxShadowBackground: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+
+@mixin card-body-style {
+  .card-body {
+    padding: 2%;
+
+    .card-title {
+      margin-top: 5px;
+      font-size: 1.2em;
+      line-height: 1.2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    a {
+      background-color: #6bae62;
+      border: none;
+    }
+
+    a:hover {
+      background-color:#f9f19f;
+      color: #000000;
+      position: relative;
+      top: 1px;
+    }
+  }
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -23,7 +52,7 @@ h2 {
   display:block;
   width:100%;
   color:black;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: $boxShadowBackground;
   text-decoration: none;
 }
 
@@ -40,103 +69,34 @@ h2 {
   background-color:#e5e5e5;
   padding:15px;
   margin-top:7px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: $boxShadowBackground;
 }
 
 .allnews {
   max-width: 31%;
   margin: 1%;
   padding: 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: $boxShadowBackground;
 
-  .card-body {
-    padding: 2%;
-
-    .card-title {
-      margin-top: 5px;
-      font-size: 1.2em;
-      line-height: 1.2;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    a {
-      background-color: #6bae62;
-      border: none;
-    }
-
-    a:hover {
-      background-color:#f9f19f;
-      color: #000000;
-      position: relative;
-      top: 1px;
-    }
-  }
+  @include card-body-style;
 }
 
 .lastnews {
   max-width: 48%;
   margin: 1%;
   padding: 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: $boxShadowBackground;
 
-  .card-body {
-    padding: 2%;
-
-    .card-title {
-      margin-top: 5px;
-      font-size: 1.2em;
-      line-height: 1.2;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    a {
-      background-color: #6bae62;
-      border: none;
-    }
-
-    a:hover {
-      background-color:#f9f19f;
-      color: #000000;
-      position: relative;
-      top: 1px;
-    }
-  }
+  @include card-body-style;
 }
 
 .cdmspublic {
-  max-width: 55%;
+  max-width: 50%;
   margin: 1% auto 3% auto;
   padding: 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: $boxShadowBackground;
 
-  .card-body {
-    padding: 2%;
-
-    .card-title {
-      margin-top: 5px;
-      font-size: 1.2em;
-      line-height: 1.2;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    a {
-      background-color: #6bae62;
-      border: none;
-    }
-
-    a:hover {
-      background-color:#f9f19f;
-      color: #000000;
-      position: relative;
-      top: 1px;
-    }
-  }
+  @include card-body-style;
 }
 
 .partners > a > img {
