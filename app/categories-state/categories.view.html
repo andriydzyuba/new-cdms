@@ -4,7 +4,7 @@
             <h3 data-ng-bind="vm.infoCat[0].head"></h3>
             <div class="row">
                 <div class="col-md-6 card lastnews" data-ng-repeat="lastNews in vm.lastNews">
-                    <img class="card-img-top" data-ng-src="{{lastNews.image}}" alt="Card image" width="100%">
+                    <img class="card-img-top" data-ng-src="{{lastNews.image}}" alt="Новина" width="100%">
                     <div class="card-body">
                         <h5 class="card-title" data-toggle="tooltip" title="{{lastNews.title}}" data-ng-bind="lastNews.title"></h5>
                         <a ui-sref="article({id:lastNews.id})" class="btn btn-success">Детальніше</a>

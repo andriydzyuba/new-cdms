@@ -33,7 +33,7 @@ header {
     }
 
     .navbar-right {
-      margin: 9px 20px 5px 5px;
+      margin: 9px 20px 5px 0;
 
       .searchbutton {
         font-weight: bold;
@@ -41,10 +41,40 @@ header {
     }
   }
 
-  .affix {
-    top:0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
+  //.affix {
+  //  top:0;
+  //  left: 0;
+  //  width: 100%;
+  //  z-index: 9999;
+  //}
+}
+
+@media (max-width: 991px) {
+  header {
+
+    .mobheader {
+      text-align: center;
+    }
+
+    blockquote {
+      display: none;
+    }
+
+    .navbar {
+
+      .navbar-right {
+        margin: 9px 0 10px 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+  header {
+
+    .navbar {
+      text-align: center;
+    }
   }
 }

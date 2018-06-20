@@ -11,7 +11,7 @@
 
         vm.onSelectOptionChanged = onSelectOptionChanged;
 
-        vm.inputSearch = /^[a-zA-Z]{1,10}$/;
+        vm.inputSearch = /^[a-zA-ZА-Яа-яЇїІіҐґ]{1,10}$/;
 
         vm.findNews = [];
 
@@ -29,7 +29,7 @@
         vm.searchFunction = function () {
 
             var params = {
-                limit: 1,
+                limit: 9,
                 offset: vm.findNews.length
             }
             console.log(vm.findNews.length);

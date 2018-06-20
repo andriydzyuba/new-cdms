@@ -4,7 +4,7 @@
       <h3>Публікації Центру</h3>
       <div class="row">
         <div class="card cdmspublic" data-ng-repeat="cdmsPublic in vm.cdmsPublic">
-          <img class="card-img-top" data-ng-src="{{cdmsPublic.image}}" alt="Card image" width="100%">
+          <img class="card-img-top" data-ng-src="{{cdmsPublic.image}}" alt="Публікація" width="100%">
           <div class="card-body">
             <h5 class="card-title" data-toggle="tooltip" title="{{cdmsPublic.title}}" data-ng-bind="cdmsPublic.title"></h5>
             <a ui-sref="manual({id:cdmsPublic.id})" class="btn btn-success">Детальніше</a>
@@ -23,4 +23,3 @@
     </div>
   </div>
 </div>
-

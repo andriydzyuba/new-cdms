@@ -17,8 +17,8 @@
                 <br>
                 <h4 data-ng-show="vm.showtitle">Результати пошуку:</h4>
                 <h4 data-ng-show="vm.noresulte">Результати пошуку відсутні.</h4>
-                <div class="col-md-3 card lastnews" data-ng-repeat="findNew in vm.findNews">
-                    <img class="card-img-top" data-ng-src="{{findNew.image}}" alt="Card image" width="100%">
+                <div class="col-md-4 col-sm-6 card allnews" data-ng-repeat="findNew in vm.findNews">
+                    <img class="card-img-top" data-ng-src="{{findNew.image}}" alt="Новина" width="100%">
                     <div class="card-body">
                         <h5 class="card-title" data-toggle="tooltip" title="{{findNew.title}}" data-ng-bind="findNew.title"></h5>
                         <a ui-sref="article({id:findNew.id})" class="btn btn-success">Детальніше</a>

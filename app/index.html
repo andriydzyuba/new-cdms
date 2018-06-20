@@ -4,15 +4,27 @@
 <!--[if IE 8]>         <html lang="en" ng-app="app" data-ng-controller='BaseController as vm' class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" ng-app="app" data-ng-controller='BaseController as vm' class="no-js"> <!--<![endif]-->
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120365445-1"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-120365445-1');
+  </script>
+
   <!--<base href="/">-->
   <meta charset="utf-8">
+  <meta name="google-site-verification" content="IuFM_u6z7KQlCd2aGXm4YIYycTydjWGszBeTow4IpGw" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Центр досліджень місцевого самоврядування</title>
   <link rel="icon" href="content/images/icon.ico" type="image/x-icon">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
 
-  <!--FONTS-->
+  <!--Fonts-->
   <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
@@ -21,16 +33,18 @@
   <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link href="bower_components/ng-cropper/dist/ngCropper.all.css" rel="stylesheet">
+
+  <!--Style-->
   <link rel="stylesheet" href="content/css/style.css">
 
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 <body>
-
-
   <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please
+      <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+  </p>
   <![endif]-->
 
   <div ng-include="'layout/shell.html'"></div>
@@ -40,9 +54,7 @@
   -->
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
   <script src="bower_components/underscore/underscore-min.js"></script>
-
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/ngstorage/ngStorage.min.js"></script>
 
@@ -54,10 +66,8 @@
   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
   <script src="bower_components/summernote/dist/summernote.min.js"></script>
   <script src="bower_components/eventEmitter/EventEmitter.js"></script>
-
   <script src="bower_components/angular-summernote/dist/angular-summernote.min.js"></script>
   <script src="bower_components/ng-cropper/dist/ngCropper.all.js"></script>
-
   <script src="bower_components/chance/dist/chance.min.js"></script>
 
   <script src="core/base.controller.js"></script>
@@ -67,41 +77,32 @@
   <script src="home-state/home.route.js"></script>
   <script src="home-state/home.controller.js"></script>
 
-
   <script src="about-state/about.route.js"></script>
   <script src="about-state/about.controller.js"></script>
-
 
   <script src="contacts-state/contacts.route.js"></script>
   <script src="contacts-state/contacts.controller.js"></script>
 
-
   <script src="english-state/english.route.js"></script>
   <script src="english-state/english.controller.js"></script>
-
 
   <script src="projects-state/projects.route.js"></script>
   <script src="projects-state/projects.controller.js"></script>
 
-
   <script src="publications-state/publications.route.js"></script>
   <script src="publications-state/publications.controller.js"></script>
-
 
   <script src="offers-state/offers.route.js"></script>
   <script src="offers-state/offers.controller.js"></script>
 
-
   <script src="news-state/news.route.js"></script>
   <script src="news-state/news.controller.js"></script>
-
 
   <script src="categories-state/categories.route.js"></script>
   <script src="categories-state/categories.controller.js"></script>
 
   <script src="search-state/search.route.js"></script>
   <script src="search-state/search.controller.js"></script>
-
 
   <script src="layout/eco-header/eco-header.directive.js"></script>
   <script src="layout/eco-aside/eco-aside.directive.js"></script>
@@ -146,18 +147,14 @@
   <script src="news-state/article-state/article.route.js"></script>
   <script src="news-state/article-state/article.controller.js"></script>
 
-
   <script src="layout/read-markup/read-markup.directive.js"></script>
   <script src="layout/summer/summer.directive.js"></script>
   <script src="layout/select-image/select-image.directive.js"></script>
   <script src="layout/select-image/select-image-manual.directive.js"></script>
   <script src="layout/select-image/image-service.service.js"></script>
-
-
   <script src="layout/cropper/cropper.service.js"></script>
   <script src="layout/cropper/cropper.controller.js"></script>
-
   <script src="layout/modals/confirm-modal/confirmModalController.js"></script>
 
   </body>
-  </html>
+</html>

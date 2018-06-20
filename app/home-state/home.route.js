@@ -6,7 +6,7 @@
         .config(['$stateProvider', function($stateProvider) {
             $stateProvider
                 .state('home', {
-                    url:'/',
+                    url:'/home',
                     templateUrl: 'home-state/home.view.html',
                     controller: 'HomeController',
                     controllerAs: 'vm'

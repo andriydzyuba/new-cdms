@@ -4,11 +4,15 @@
             <h3>Останні новини</h3>
             <div class="row">
                 <div class="col-md-6 card lastnews" data-ng-repeat="lastNews in vm.lastNews">
-                    <img class="card-img-top" data-ng-src="{{lastNews.image}}" alt="Card image" width="100%">
+                    <img class="card-img-top" data-ng-src="{{lastNews.image}}" alt="Новина" width="100%">
                     <div class="card-body">
                         <h5 class="card-title" data-toggle="tooltip" title="{{lastNews.title}}" data-ng-bind="lastNews.title"></h5>
                         <a ui-sref="article({id:lastNews.id})" class="btn btn-success">Детальніше</a>
                     </div>
+                </div>
+                <div class="col-md-12 text-center">
+                    <br>
+                    <a ui-sref="news" class="btn btn-primary" role="button">Всі новини</a>
                 </div>
             </div>
         </div>
@@ -16,15 +20,15 @@
         <div class="row">
             <h2 class="text-center">Партнери</h2>
             <div class="partners">
-                <a href="http://www.iwoev.org/"><img data-ng-src="content/images/partner_1.jpg" alt=""></a>
-                <a href="http://pravo.org.ua/"><img data-ng-src="content/images/partner_2.jpg" alt=""></a>
-                <a href="http://www.city-institute.org/"><img data-ng-src="content/images/partner_3.png" alt=""></a>
-                <a href="http://mknieruchomosci.pl/"><img data-ng-src="content/images/partner_4.jpg" alt=""></a>
+                <a href="http://www.iwoev.org/"><img data-ng-src="content/images/partner_1.jpg" alt="IWO"></a>
+                <a href="http://pravo.org.ua/"><img data-ng-src="content/images/partner_2.jpg" alt="ЦППР"></a>
+                <a href="http://www.city-institute.org/"><img data-ng-src="content/images/partner_3.png" alt="ІМ ЛМР"></a>
+                <a href="http://mknieruchomosci.pl/"><img data-ng-src="content/images/partner_4.jpg" alt="MKN"></a>
                 <br>
-                <a href="http://www.auc.org.ua/"><img data-ng-src="content/images/partner_5.jpg" alt=""></a>
-                <a href="http://www.oblrada.lviv.ua/асоціація_«ради_львівщини»_393cms.htm"><img data-ng-src="content/images/partner_6.png" alt=""></a>
-                <a href="http://www.loma.org.ua/"><img data-ng-src="content/images/partner_7.jpg" alt=""></a>
-                <a href="https://sites.google.com/site/lvivltek/"><img data-ng-src="content/images/partner_8.jpg" alt=""></a>
+                <a href="http://www.auc.org.ua/"><img data-ng-src="content/images/partner_5.jpg" alt="ЛРВ АМУ"></a>
+                <a href="http://www.oblrada.lviv.ua/асоціація_«ради_львівщини»_393cms.htm"><img data-ng-src="content/images/partner_6.png" alt="РЛ ЛОР"></a>
+                <a href="http://www.loma.org.ua/"><img data-ng-src="content/images/partner_7.jpg" alt="ЛАВУ"></a>
+                <a href="https://sites.google.com/site/lvivltek/"><img data-ng-src="content/images/partner_8.jpg" alt="ЛТЕК"></a>
             </div>
         </div>
     </div>

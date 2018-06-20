@@ -3,6 +3,6 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "cdms";
+$dbname = "cdmsorgu_CDMS";
 
 ?>
