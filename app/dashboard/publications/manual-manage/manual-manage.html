@@ -14,19 +14,10 @@
           <option ng-repeat="categori in vm.categories track by $index" value="{{categori.catId}}">{{categori.title}}</option>
         </select>
 
-        <!--<h3>{{vm.selectedCat}}</h3>-->
-
         <div>
           <br>
           <input type="text" data-ng-model="vm.manual.title" placeholder="Назва публікації" class="form-control">
         </div>
-
-        <!--<div class="input-group">-->
-          <!--<textarea data-ng-model="vm.manual.snippet"-->
-                    <!--placeholder="Manual Description"-->
-                    <!--class="form-control">-->
-          <!--</textarea>-->
-        <!--</div>-->
       </div>
     </div>
 

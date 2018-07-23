@@ -20,11 +20,9 @@
         }
 
 
-
         function getPublications() {
             publicationsService.getPublications().then(function(data) {
                 vm.publications = data.data;
-                console.log(data);
             })
         }
 
@@ -34,15 +32,11 @@
             confirmService.openConfirmModal(message).then(function(response){
                 if (response) {
                     publicationsService.deleteManual(manual.id).then(function(data){
-                        console.log(manual.id);
                         getPublications();
                     });
                 }
             });
         }
 
-    
     }
 })();
-
-

@@ -26,25 +26,17 @@
         
         function getManual() {
             publicationsService.getManual(manualId).then(function(response) {
-                console.log(manualId);
                 vm.manual = response.data;
-                console.log(response);
             })
         }
 
         function editManual() {
 
-           // if (!vm.article.date) {
-           //     vm.article.date = new Date();
-           // }
             vm.manual.catId = vm.selectedCat;
             publicationsService.editManual(vm.manual).then(function(response) {
                 $state.go('dashboard.publications');
             });
         }
 
-       
     }
 })();
-
-

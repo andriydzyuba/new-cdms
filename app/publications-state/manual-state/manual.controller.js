@@ -19,17 +19,8 @@
         function activate() {
             publicationsService.getManual(manualId).then(function(data) {
                 vm.manual = data.data;
-                console.log(vm.manual);
             })
         }
-
-        // function getArticle() {
-        //     newsService.getArticle(articleId).then(function(response) {
-        //         console.log(articleId);
-        //         vm.article = response.data;
-        //         console.log(response);
-        //     })
-        // }
 
     }
 

@@ -35,6 +35,8 @@ h2 { margin-top: 7px; }
 
 .partners > a > img { margin: 1% 0 2% 1%; width: 23%; }
 
+.mainVideo { width: 100%; height: 400px; }
+
 @media (max-width: 991px) { .lastnews { max-width: 70%; margin: 1% auto 3% auto; }
   .allnews { max-width: 48%; margin: 1%; } }
 @media (max-width: 767px) { .lastnews { max-width: 90%; margin: 1% auto 3% auto; }
@@ -62,10 +64,12 @@ footer .copyright { margin-top: 2%; font-size: 0.9em; }
 .article { padding-right: 2%; }
 .article .article-data { float: right; }
 .article .article-category { float: left; }
-.article img { margin: 5px 30px 5px 0; float: left; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19); }
+.article .article-text > div > p > img { width: 100% !important; margin-bottom: 15px; }
+.article img { width: 50%; margin: 5px 30px 5px 0; float: left; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19); }
 .article p { text-align: justify; line-height: 1.8; }
 .article hr { margin: 0; }
 
+@media (max-width: 991px) { .article > img { width: 100%; margin-bottom: 15px; } }
 .dashboard-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 .dashboard-image { margin-bottom: 10px; }

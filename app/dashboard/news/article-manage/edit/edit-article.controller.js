@@ -26,25 +26,17 @@
         
         function getArticle() {
             newsService.getArticle(articleId).then(function(response) {
-                console.log(articleId);
                 vm.article = response.data;
-                console.log(response);
             })
         }
 
         function editArticle() {
 
-           // if (!vm.article.date) {
-           //     vm.article.date = new Date();
-           // }
             vm.article.catId = vm.selectedCat;
             newsService.editArticle(vm.article).then(function(response) {
                 $state.go('dashboard.news');
             });
         }
 
-       
     }
 })();
-
-

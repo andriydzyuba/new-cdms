@@ -10,7 +10,5 @@
     function BaseController($state, users, $rootScope) {
         var vm = this;
 
-
     }
 })();
-

@@ -15,10 +15,8 @@
         function activate() {
             publicationsService.getPublications().then(function (data) {
                 vm.cdmsPublic = data.data;
-                console.log(vm.cdmsPublic);
             });
         }
     }
 
 })();
-

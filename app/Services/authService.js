@@ -17,14 +17,6 @@
 
         return service;
 
-        // var authentication = {
-        //     isAuth: false
-        // };
-
-        // var setAuth = function(authData) {
-        //     authentication.isAuth = true;
-        // };
-
         function signIn(username, password) {
             var defered = $q.defer();
             var query= 'api/login.php';
@@ -38,7 +30,6 @@
             };
 
             $http.post(query, user).then(function(data){
-                console.log(data.data);
                 if (data.data) {
                     sessionStorage.setItem('authData', true);
                     authentication.isAuth = true;
@@ -53,9 +44,6 @@
 
         function checkAuthentication(event, toState) {
             var authData = JSON.parse(sessionStorage.getItem('authData'));
-
-            console.log(authData);
-            console.log(toState.dashboard);
 
             if (!authData && toState.dashboard) {
                 event.preventDefault();
@@ -72,5 +60,3 @@
 
     }
 })();
-
-

@@ -9,7 +9,13 @@
     float: left;
   }
 
+  .article-text>div>p>img {
+    width: 100% !important;
+    margin-bottom: 15px;
+  }
+
   img {
+    width: 50%;
     margin: 5px 30px 5px 0;
     float: left;
     box-shadow: $boxShadowBackground;
@@ -22,5 +28,13 @@
 
   hr {
     margin: 0;
+  }
+}
+
+@media (max-width: 991px) {
+
+  .article>img {
+    width: 100%;
+    margin-bottom: 15px;
   }
 }

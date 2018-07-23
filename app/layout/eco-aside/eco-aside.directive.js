@@ -23,39 +23,6 @@
     /* @ngInject */
     function EcoAsideController($element, $rootScope, $scope, $state) {
         var vm = this;
- /*       vm.states = [];
-
-        vm.getStateHref = getStateHref;
-
-        activate();
-
-        function activate() {
-            updateStates();
-        }
-
-        function getStateHref(state) {
-            return $state.href(state.name, state.params);
-        }
-
-        function updateStates() {
-            var statesList = [
-                {
-                    ukName: 'Головна',
-                    name: 'home'
-                },
-                {
-                    ukName: 'Про проект',
-                    name: 'about'
-                }
-            ];
-
-            vm.states.length = 0;
-
-            _.each(statesList, function(elem) {
-                vm.states.push(elem);
-            })
-        }
-        console.log(vm.states);*/
 
     }
 })();

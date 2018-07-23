@@ -22,7 +22,6 @@
         function getNews() {
             newsService.getNewsByCategory(catId).then(function (data) {
                 vm.lastNews = data.data;
-                console.log(vm.lastNews);
             });
         }
 
@@ -31,11 +30,8 @@
         function getInfoCat() {
             newsService.getInfoByCategory(catId).then(function (data) {
                 vm.infoCat = data.data;
-                console.log(vm.infoCat);
             });
         }
 
     }
 })();
-
-

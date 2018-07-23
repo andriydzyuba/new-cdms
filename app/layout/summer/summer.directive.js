@@ -64,7 +64,6 @@
         }
 
         function onPaste(e) {
-            console.log(e);
         }
     }
 

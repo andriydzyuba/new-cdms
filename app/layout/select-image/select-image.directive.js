@@ -49,13 +49,11 @@
         function onImageLoaded(file) {
             cropperService.openCropper(file, vm.config.aspectRatio, vm.config.resizeTo, vm.config.mWidth, vm.config)
                 .catch(function(err) {
-                    console.log(err);
                 })
                 .then(function(response){
                     if (!response) { return false; }
 
                     vm.image = response.data ? response.data : response;
-                    console.log(vm.image);
 
                     updateImageSrc(vm.image.src);
 

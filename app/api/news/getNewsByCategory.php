@@ -8,7 +8,8 @@ $request = json_decode($postdata);
 $conn = new mysqli($servername, $username, $password, $dbname);
 mysqli_set_charset($conn,"utf8");
 
-$sql = "SELECT * FROM News WHERE catId=$postdata";
+//$sql = "SELECT * FROM News WHERE catId=$postdata ";
+$sql = "SELECT * FROM News WHERE catId=$postdata ORDER BY id DESC";
 
 $result = $conn->query($sql);
 

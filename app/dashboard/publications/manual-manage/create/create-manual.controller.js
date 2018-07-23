@@ -26,23 +26,14 @@
 
         vm.categories = publicationsService.data;
 
-        console.log(publicationsService.data);
-
         function createManual() {
-
-
 
             vm.manual.date = new Date();
 
             publicationsService.createManual(vm.manual).then(function(response) {
                 $state.go('dashboard.publications');
-                console.log(vm.manual);
             });
         }
 
-
-
     }
 })();
-
-

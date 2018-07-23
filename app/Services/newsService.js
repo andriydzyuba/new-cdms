@@ -12,9 +12,9 @@
         var service = {
             data: {},
             getNews: getNews,
+            getLastNews: getLastNews,
             getNewsByCategory: getNewsByCategory,
             getInfoByCategory: getInfoByCategory,
-            getLastNews: getLastNews,
             getArticle: getArticle,
             createArticle: createArticle,
             editArticle: editArticle,
@@ -42,6 +42,17 @@
             return defered.promise;
         }
 
+        function getLastNews() {
+            var defered = $q.defer();
+            var query= 'api/news/getLastNews.php';
+
+            $http.post(query).then(function(data){
+                defered.resolve(data);
+            });
+
+            return defered.promise;
+        }
+
         function getNewsByCategory(catId) {
             var defered = $q.defer();
             var query = 'api/news/getNewsByCategory.php', catId;
@@ -58,17 +69,6 @@
             var query = 'api/news/getInfoByCategory.php', catId;
 
             $http.post(query, catId).then(function(data){
-                defered.resolve(data);
-            });
-
-            return defered.promise;
-        }
-
-        function getLastNews() {
-            var defered = $q.defer();
-            var query = apiUrl + '/api/news/last';
-
-            $http.get(query).then(function(data){
                 defered.resolve(data);
             });
 
@@ -127,5 +127,3 @@
 
     }
 })();
-
-
